@@ -5,7 +5,7 @@ import { JobData } from "./data";
 
 const JobCard = lazy(() => {
   return new Promise((resolve) => {
-    setTimeout(() => resolve(import("./components/JobCard")), 500);
+    setTimeout(() => resolve(import("./components/JobCard")), 5000);
   });
 });
 
