@@ -8,8 +8,11 @@ export const NavBar = () => (
       <Link href="/">
         <NavBarItem>home</NavBarItem>
       </Link>
-      <Link href="/contact">
-        <NavBarItem>contact</NavBarItem>
+      <Link href="/leave-a-message">
+        <NavBarItem>leave a message</NavBarItem>
+      </Link>
+      <Link href="/messages">
+        <NavBarItem>see what people are saying</NavBarItem>
       </Link>
       <li className="mx-2 p-1.5">
         <ToggleThemeButton />
