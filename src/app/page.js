@@ -1,34 +1,39 @@
-import Image from "next/image";
+import { ArrowDownIcon } from "@heroicons/react/24/outline";
+import { lazy } from "react";
+import { RenderOnViewportEntry } from "./components/RenderOnViewportEntry";
+import { JobData } from "./data";
+
+const JobCard = lazy(() => {
+  return new Promise((resolve) => {
+    setTimeout(() => resolve(import("./components/JobCard")), 500);
+  });
+});
 
 export default function Home() {
   return (
     <>
-      <div>
-        <h1>content</h1>
-        <h1>content</h1>
-        <h1>content</h1>
-        <h1>content</h1>
-        <h1>content</h1>
+      <section className="flex flex-col justify-center items-center h-screen w-screen">
+        <p className="text-xl mb-1">start scrolling to see my work</p>
+        <p className="text-sm font-thin mb-8 p-8 z-auto">
+          (I&apos;ve added 5 seconds of loading time on purpose, just for
+          showing off react&apos;s lazy load more precisely)
+        </p>
+        <ArrowDownIcon className="animate-bounce h-20 w-20 text-pink-400" />
+      </section>
 
-        <div className="mb-32 grid text-center lg:max-w-5xl lg:w-full lg:mb-0 lg:grid-cols-4 lg:text-left">
-          <a
-            href="https://www.studiosol.com.br/"
-            className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-            target="_blank"
-            rel="noopener noreferrer"
+      <section className="flex flex-col justify-center items-center w-screen">
+        {JobData.map((props) => (
+          <RenderOnViewportEntry
+            className="w-9/12"
+            key={props.title}
+            threshold={0.2}
           >
-            <h2 className={`mb-3 text-2xl font-semibold`}>
-              studiosol{" "}
-              <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-                -&gt;
-              </span>
-            </h2>
-            <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-              Find in-depth information about Next.js features and API.
-            </p>
-          </a>
-        </div>
-      </div>
+            {/* this is absolutely overkill, since all the content
+          can be rendered with the page in SSR, but we're having fun here lol */}
+            <JobCard {...props} />
+          </RenderOnViewportEntry>
+        ))}
+      </section>
     </>
   );
 }

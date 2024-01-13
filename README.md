@@ -37,4 +37,7 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/deploym
 
 ## Timeline
 
+the durations are all an approximation, i've made several pauses during the development
+
 20min - bootstrap project with create-next-app utility tool & deploy to vercel
+1h - setup themes and main homepage
