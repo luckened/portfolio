@@ -36,7 +36,7 @@ the durations are all an approximation, I've made several pauses during the deve
 
 30min - bootstrap project with create-next-app utility tool, project cleanup & deploy to vercel
 
-1h30 - setup themes and main homepage
+1h30m - setup themes and main homepage
 
 1h30m - setup lazy load in main homepage with suspense & react.lazy
 
@@ -45,6 +45,8 @@ the durations are all an approximation, I've made several pauses during the deve
 1h30m - setup message form: state, db insertion and a minimal validation
 
 30m - copy data from my linkedin to the homepage, fill readme
+
+TOTAL: 7h
 
 ## Some thoughts
 
