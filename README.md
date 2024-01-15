@@ -37,7 +37,10 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/deploym
 
 ## Timeline
 
-the durations are all an approximation, i've made several pauses during the development
+the durations are all an approximation, I've made several pauses during the development
 
-20min - bootstrap project with create-next-app utility tool & deploy to vercel
+30min - bootstrap project with create-next-app utility tool, deploy to vercel & project cleanup
 1h - setup themes and main homepage
+1h - setup lazy load jobs in main homepage with suspense & react.lazy
+1h30 - setup vercel postgres db, /messages (list all messages page)
+1h - setup message form: state, db insertion and a minimal validation

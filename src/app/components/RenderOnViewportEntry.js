@@ -1,7 +1,7 @@
 "use client";
 
 import { Suspense, useRef } from "react";
-import { useFirstViewportEntry } from "../hooks/useFirstViewportEntry";
+import { useFirstViewportEntry } from "../../hooks/useFirstViewportEntry";
 import { Loading } from "./Loading";
 
 export const RenderOnViewportEntry = ({

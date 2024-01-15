@@ -1,4 +1,4 @@
-import { ToggleThemeButton } from "./ToggleThemeButton";
+import { ToggleThemeButton } from "../ToggleThemeButton";
 import Link from "next/link";
 import { NavBarItem } from "./NavBarItem";
 
@@ -14,9 +14,9 @@ export const NavBar = () => (
       <Link href="/messages">
         <NavBarItem>see what people are saying</NavBarItem>
       </Link>
-      <li className="mx-2 p-1.5">
+      <NavBarItem>
         <ToggleThemeButton />
-      </li>
+      </NavBarItem>
     </ul>
   </nav>
 );

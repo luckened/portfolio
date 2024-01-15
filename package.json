@@ -13,12 +13,13 @@
     "next": "14.0.4",
     "next-themes": "^0.2.1",
     "react": "^18",
-    "react-dom": "^18"
+    "react-dom": "^18.2.0"
   },
   "devDependencies": {
     "@heroicons/react": "^2.1.1",
     "@types/node": "20.11.0",
     "@types/react": "18.2.47",
+    "@types/react-dom": "^18.2.18",
     "autoprefixer": "^10.0.1",
     "eslint": "^8",
     "eslint-config-next": "14.0.4",

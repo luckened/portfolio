@@ -1,7 +1,7 @@
 import { ArrowDownIcon } from "@heroicons/react/24/outline";
 import { lazy } from "react";
 import { RenderOnViewportEntry } from "./components/RenderOnViewportEntry";
-import { JobData } from "./data";
+import { JobData } from "../data";
 
 const JobCard = lazy(() => {
   return new Promise((resolve) => {
@@ -13,7 +13,7 @@ export default function Home() {
   return (
     <>
       <section className="flex flex-col justify-center items-center h-screen w-screen">
-        <p className="text-xl mb-1">start scrolling to see my work</p>
+        <h1 className="text-xl mb-1">start scrolling to see my work</h1>
         <p className="text-sm font-thin mb-8 p-8 z-auto">
           (I&apos;ve added 5 seconds of loading time on purpose, just for
           showing off react&apos;s lazy load more precisely)

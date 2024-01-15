@@ -15,7 +15,11 @@ export const ToggleThemeButton = () => {
   }
 
   return (
-    <button onClick={() => setTheme(theme === "dark" ? "light" : "dark")}>
+    <button
+      role="switch"
+      aria-checked={theme === "dark"}
+      onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
+    >
       {theme === "dark" ? (
         <SunIcon className="h-5 w-5 text-orange-300" />
       ) : (

@@ -1,7 +1,7 @@
-import { sql } from "@vercel/postgres";
+import { getAllComments } from "../../../data/comments";
 
 export default async function Comments() {
-  const { rows } = await sql`SELECT * from COMMENTS`;
+  const { rows } = await getAllComments();
 
   return (
     <section className="flex flex-col justify-center items-center h-screen w-screen">
