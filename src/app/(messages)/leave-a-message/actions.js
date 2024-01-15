@@ -18,8 +18,9 @@ export const sendMessageAction = async (_, data) => {
     };
 
   try {
-    const { rowCount } = await insertComment(username, message);
+    await insertComment(username, message);
     revalidatePath("/messages");
+    revalidatePath("/leave-a-message");
     return { username: "", message: "", errors: null };
   } catch (e) {
     return {
