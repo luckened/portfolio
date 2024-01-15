@@ -28,8 +28,6 @@ export default function Home() {
             key={props.title}
             threshold={0.2}
           >
-            {/* this is absolutely overkill, since all the content
-          can be rendered with the page in SSR, but we're having fun here lol */}
             <JobCard {...props} />
           </RenderOnViewportEntry>
         ))}

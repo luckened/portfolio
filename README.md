@@ -42,7 +42,7 @@ the durations are all an approximation, I've made several pauses during the deve
 
 1h30m - setup vercel postgres db, `/messages` (list all messages page)
 
-1h - setup message form: state, db insertion and a minimal validation
+1h30m - setup message form: state, db insertion and a minimal validation
 
 30m - copy data from my linkedin to the homepage, fill readme
 
@@ -57,3 +57,5 @@ the durations are all an approximation, I've made several pauses during the deve
 - No docker/k8s or anything was setup for the sake of simplicity, vercel's free tier postgres db works just fine for POC's like this
 
 - I had a hard time invalidating vercel CDN cache. If you're not seeing your message upon form submit it is very likely that you're hitting cache, try sending another message so it will try to invalidate again and or refresh the page skipping browser/sw cache (cmd + shift + R). This cache is definitely not working as it should but I've got no time to figure it out yet;
+
+- React lazy load is an absolutely overkill for the homepage / listing jobs. Rendering everything in SSR would probably have a better performance overall. However, I understand that using lazy load is part of the evaluation criteria so thats it.
