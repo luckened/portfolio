@@ -14,6 +14,8 @@ pnpm dev
 bun dev
 ```
 
+To run the backend locally `cp .env.example .env.development` and fill in the environment variables
+
 ## Project structure
 
 This is using the Next's new app router under `src/app`
